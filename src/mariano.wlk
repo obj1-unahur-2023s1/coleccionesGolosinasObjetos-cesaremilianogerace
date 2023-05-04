@@ -51,7 +51,15 @@ object mariano {
 		return golosinas.sum({g=>g.peso()})
 	}
 	
-	//method (){}
+	//ESTADISTICAS
+	//los parametros los paso a conjuntos por si me pasan lista
+	method golosinasFaltantes(golosinasDeseadas){
+		return golosinasDeseadas.asSet().difference(golosinas.asSet())
+	}
+	
+	method gustosFaltantes(gustosDeseados){
+		return gustosDeseados.asSet().difference(self.sabores())
+	}
 	
 
 }
