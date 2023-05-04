@@ -96,17 +96,20 @@ object golosinaBaniada {
 object tutti {
 	var property peso = 5
 	var property libreDeGluten = true
-	//const gusto = 
+	const gustos = ["frutilla","chocolate","naranja"]
+	var mordiscos = 0
 	
 	method precio() {
 		if (libreDeGluten) { return 7}
 			else {return 10}
 	}
-	method gusto() = "frutilla"
 		
 	method mordisco() {
-		
+		mordiscos ++
 	}
+	
+	method gusto() = gustos.get(mordiscos%gustos.size())
+	
 }
 
 
