@@ -1,6 +1,38 @@
-
-test "testX" {
-
-	assert.that(true)
-
+import golosinas.*
+//para armar la estructura de datos
+describe "test sobre chocolatin"{
+	method initialize(){
+		chocolatin.peso(100)		
+	}
+	
+	test "el chocolatin con peso inicial de 100 vale 50" {
+		assert.equals(50, chocolatin.precio())
+	}
+	
+	test "un mordisco y pesará 98"{
+		chocolatin.mordisco()
+		assert.equals(98, chocolatin.peso())
+	}
 }
+
+describe "test sobre tutti"{
+	
+	test "inicialmente el sabo es frutilla"{
+		assert.that(tutti.gusto()=="frutilla")
+	}
+	
+	test "gusto de tutti luego de mordisco"{
+		tutti.mordisco()
+		assert.that(tutti.gusto()=="chocolate")
+	}
+}
+
+/*
+ * describe
+ * variables y const
+ * method1
+ * test que usa el method1
+ * test
+ * method2
+ * test q hace uso del method2
+ */

@@ -1,5 +1,7 @@
 import golosinas.*
 
+
+
 object mariano {
 	const property golosinas = []
 	
